@@ -1046,6 +1046,7 @@ a single instance of `grep` (or whatever program it is running).
 - [explainshell.com](http://explainshell.com)
 - http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 - man bash
+- calling the command with the help argument (either -h or --help)
 - Google - if you don't know how to do something, try Googling it. Other people
 have probably had the same question.
 - Learn by doing. There's no real other way to learn this than by trying it
