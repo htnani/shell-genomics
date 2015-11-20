@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: lesson
 title: "The Shell"
 comments: true
 date: 2014-08-13 16:44:36
