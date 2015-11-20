@@ -941,6 +941,23 @@ Example of renaming files with a different extension. Changing `fastq` to `fq`
          done
 
 
+## Bonus materials: Links
+
+Sometimes it would be advantageous to have a file in more than one location 
+in the file system.  For instance we may wish to keep a folder of primary
+data all together for backup, and still have the data in an analysis folder.
+Links are also a great way to rename a file with something meaningful for
+analysis without altering the original file name which may contain important
+information and make tracing its origin less transparent.
+
+We can achieve this without having multiple copies of the often large files
+using links.  Unix has multiple types of links, but usually what we want is
+a symbolic link.  A symbolic link is like a pointer to the original file, 
+while the alternative, a hard link, is more like the file existing in two
+places at the same time.
+
+    ln -s original_file.txt ../some_other_directory/new_name_for_file.txt
+
 # For Future Reference
 
 # Finding files
