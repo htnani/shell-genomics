@@ -958,6 +958,44 @@ places at the same time.
 
     ln -s original_file.txt ../some_other_directory/new_name_for_file.txt
 
+## Bonus materials: Brace expansion
+
+Often we find ourselves wanting to work on a subset of files that would 
+be selected with a wildcard.  For example if we wanted to work on samples 
+S191, S193 and S197 from the `~/shell-genomics/data/MiSeq` directory.
+
+We can generate filename that expands include these names using brace 
+expansion.  Brace expansion will generate all strings that are a combination
+of the preface and postscript strings with each of the strings enclosed in
+the braces.  The preface and postscript can be or contain the wildcard `*`.
+
+    ls *{S191,S193,S197}*.fastq
+
+You can also specify ranges of numbers and letters with brace expansion
+
+    echo {42..53}
+    echo {k..p}
+
+***
+**Bonus exercise**
+Write a brace expansion that will generate the following filenames
+
+    ex3567_L001_R1.fastq
+    ex3567_L001_R2.fastq
+    ex3567_L002_R1.fastq
+    ex3567_L002_R2.fastq
+    ex3568_L001_R1.fastq
+    ex3568_L001_R2.fastq
+    ex3568_L002_R1.fastq
+    ex3568_L002_R2.fastq
+    ex3569_L001_R1.fastq
+    ex3569_L001_R2.fastq
+    ex3569_L002_R1.fastq
+    ex3569_L002_R2.fastq
+
+***
+
+
 # For Future Reference
 
 # Finding files
