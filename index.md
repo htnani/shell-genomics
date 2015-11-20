@@ -7,7 +7,7 @@ maintainers: ["Tracy Teal"]
 domain: Genomics
 topic: The Shell
 software: Shell
-dataurl: http://files.figshare.com/2252083/survey_data_spreadsheet_messy.xls
+dataurl: https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.tar.gz_
 ---
 
 <!-- USING THIS LESSON TEMPLATE -->

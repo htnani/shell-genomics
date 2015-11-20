@@ -93,10 +93,16 @@ by manipulating some experimental data.
 Now we're going to download the data for the tutorial. For this you'll need
 internet access, because you're going to get it off the web.  
 
-We're going to be working with data from
+We're going to be working with data from 
+[https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.tar.gz]
+(https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.tar.gz)
 
+You can download this data, move it to your home directory and open it using
+your computers graphic user interface.  Opening the file should create a folder
+called shell-genomics containing a folder called data.
 
-
+If it doesn't work just ask a helper - this often is the most difficult part of
+the entire lesson!
 
 Now let's go in to that directory
 
