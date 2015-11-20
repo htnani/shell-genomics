@@ -870,6 +870,27 @@ Now let's try running it again
 Now you should have seen some output, and of course, it's AWESOME!
 Congratulations, you just created your first shell script! You're set to rule the world.
 
+## Permissions
+
+Another important use of the `chmod` command is to control who can do what with files.  Often 
+it is important to protect the original data files from modification.  Let's make an important
+data file.
+
+    echo "42" > important_data.txt
+
+To stop anyone on the system, including you, from being able to write to or delete the file we 
+change the mode.
+
+    chmod a-w important_data.txt
+
+This command tells the shell to for all users (a) take away (-) write access (w).  Now if we
+try to edit the file or delete it we will get `-bash: ./.important_data.txt: Permission denied`.
+If we decide we need to move or edit this file we can add back write permissions.
+
+    chmod a+w important_data.txt
+
+It is good practice to always write protect your primary data.
+
 ## Bonus materials: Automation
 
 Looping at the command line
