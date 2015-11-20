@@ -885,10 +885,13 @@ change the mode.
     chmod a-w important_data.txt
 
 This command tells the shell to for all users (a) take away (-) write access (w).  Now if we
-try to edit the file or delete it we will get `-bash: ./.important_data.txt: Permission denied`.
-If we decide we need to move or edit this file we can add back write permissions.
+try to edit the file or delete it we will get an error such as 
+`-bash: override r--r--r-- user/group for important_data.txt?`.
+If we decide we need to move or edit this file we can add back write permissions.  We dont want
+other people to be able to write to the file so we change the mode just for the user (u) to add
+ (+) write access (w).
 
-    chmod a+w important_data.txt
+    chmod u+w important_data.txt
 
 It is good practice to always write protect your primary data.
 
