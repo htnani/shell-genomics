@@ -9,6 +9,8 @@ root: .
 Author: Tracy Teal  
 Original contributors:
 Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)
+VLSCI contributions:
+Matthew Wakefield
 
 ## Objectives
 - What is the shell?
