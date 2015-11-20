@@ -1,5 +1,3 @@
 markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
-#baseurl: "/shell-genomics"
-root: "/shell-genomics"
