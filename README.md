@@ -550,7 +550,7 @@ are identical to the `man` program.
 | key     | action |
 | ------- | ---------- |
 | "space" | to go forward |
-|  "b"    | to go backwarsd |
+|  "b"    | to go backwards |
 |  "g"    | to go to the beginning |
 |  "G"    | to go to the end |
 |  "q"    | to quit |
@@ -899,7 +899,7 @@ Or if we just wanted to look at the first 20 lines of each of the .fastq files, 
 
 If we wanted to output these first 40 lines to a new file, we could do
 
-     for i in #.fastq;
+     for i in *.fastq;
          head -n 40 $i > new_$i;
          done
 
