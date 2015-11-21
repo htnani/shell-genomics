@@ -52,13 +52,15 @@ shell commands.
 ## Information on the shell
 
 shell cheat sheets:<br>
-* [http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/](http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
-* [https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md](https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md)
+
+- [http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/](http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
+- [https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md](https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md)
 
 Explain shell - a web site where you can see what the different components of
 a shell command are doing.  
-* [http://explainshell.com](http://explainshell.com)
-* [http://www.commandlinefu.com](http://www.commandlinefu.com)
+
+- [http://explainshell.com](http://explainshell.com)
+- [http://www.commandlinefu.com](http://www.commandlinefu.com)
 
 
 ## How to access the shell
