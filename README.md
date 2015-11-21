@@ -480,6 +480,9 @@ You can easily access previous commands.  Hit the up arrow.
 Hit it again.  You can step backwards through your command history.
 The down arrow takes your forwards in the command history.
 
+The `control` key provides many useful unix shortcuts and in documentation
+is indicated by `^`
+
 ^-C will cancel the command you are writing, and give you a fresh prompt.
 
 ^-R will do a reverse-search through your command history.  This
