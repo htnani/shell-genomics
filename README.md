@@ -654,7 +654,7 @@ The redirection command for putting something in a file is `>`
 Let's try it out and put all the sequences that contain 'TTATCCGGATTTATTGGGTTTAAAGGGT'
 from all the files in to another file called 'good-data.txt'
 
-    grep -B 2 TTATCCGGATTTATTGGGTTTAAAGGGT * > good-data.txt
+    grep -B 1 -A 2 TTATCCGGATTTATTGGGTTTAAAGGGT * > good-data.txt
 
 The prompt should sit there a little bit, and then it should look like nothing
 happened. But type `ls`. You should have a new file called good-data.txt. Take
