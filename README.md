@@ -623,7 +623,8 @@ The `-A` flag stands for "after match" so it's returning the line that
 matches plus the three after it. The `-B` flag returns that number of lines
 before the match.
 
-** Exercise **
+***
+**Exercise**
 
 Search for the sequence 'TTATCCGGATTTATTGGGTTTAAAGGGT' in the
 `F3D0_S188_L001_R1_001.fastq` file and in the output have the
@@ -633,6 +634,8 @@ sequence name and the sequence. e.g.
     TACGGAGGATGCGAGCGTTATCCGGATTTATTGGGTTTAAAGGGTGCGTAGGCGGGATGCAG
 
 Search for that sequence in all the FASTQ files.
+
+***
 
 ## Redirection
 
