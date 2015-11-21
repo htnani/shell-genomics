@@ -592,15 +592,15 @@ to see the beginning or end of the file, or see how it's formatted.
 The commands are `head` and `tail` and they just let you look at
 the beginning and end of a file respectively.
 
-head F3D0_S188_L001_R1_001.fastq
-tail F3D0_S188_L001_R1_001.fastq
+    head F3D0_S188_L001_R1_001.fastq
+    tail F3D0_S188_L001_R1_001.fastq
 
 The `-n` option to either of these commands can be used to print the
 first or last `n` lines of a file. To print the first/last line of the
 file use:
 
-head -n 1 F3D0_S188_L001_R1_001.fastq
-tail -n 1 F3D0_S188_L001_R1_001.fastq
+    head -n 1 F3D0_S188_L001_R1_001.fastq
+    tail -n 1 F3D0_S188_L001_R1_001.fastq
 
 
 ## Searching files
@@ -610,7 +610,7 @@ search within files without even opening them, using `grep`. Grep is a command-l
 utility for searching plain-text data sets for lines matching a string or regular expression.
 Let's give it a try!
 
-Let's search for that sequence 1101:14341 in the F3D0_S188_L001_R1_001.fastq file.
+Let's search for that sequence 1101:14341 in the `F3D0_S188_L001_R1_001.fastq` file.
 
     grep 1101:14341 F3D0_S188_L001_R1_001.fastq
 
@@ -626,10 +626,11 @@ before the match.
 ** Exercise **
 
 Search for the sequence 'TTATCCGGATTTATTGGGTTTAAAGGGT' in the
-F3D0_S188_L001_R1_001.fastq file and in the output have the
+`F3D0_S188_L001_R1_001.fastq` file and in the output have the
 sequence name and the sequence. e.g.  
-@M00967:43:000000000-A3JHG:1:2114:11799:28499 1:N:0:188  
-TACGGAGGATGCGAGCGTTATCCGGATTTATTGGGTTTAAAGGGTGCGTAGGCGGGATGCAG
+
+    @M00967:43:000000000-A3JHG:1:2114:11799:28499 1:N:0:188  
+    TACGGAGGATGCGAGCGTTATCCGGATTTATTGGGTTTAAAGGGTGCGTAGGCGGGATGCAG
 
 Search for that sequence in all the FASTQ files.
 
