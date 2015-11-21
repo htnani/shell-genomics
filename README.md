@@ -1010,6 +1010,26 @@ Write a brace expansion that will generate the following filenames
 
 ***
 
+## Bonus materials: Chaining commands
+
+Pipes and redirects can be used to move data through a series of programs
+using the output of one program as the input to the next.  The advantage of
+using pipes is that we can avoid creating intermediate files on the hard drive
+(which is relatively slow) and do all the computation in memory.
+
+For example the following command line maps a fastq file with bowtie, converts
+the output to bam with samtools and sorts the bamfile with samtools.
+
+    bowtie2 --local -x GRCh38 -U in.fastq | samtools view -bSu - | samtools sort - out_sorted
+
+Chaining pipes is powerfull but can be fragile leading to silent failures in
+some cases. A well known genomics case that fails is piping `mpileup` output
+into `varscan` where `varscan` will often finish before the end of the `mpileup`
+file causing a silent error.
+
+For complex cases a pipeline program that checks for errors in execution is
+a better solution.
+
 
 # For Future Reference
 
