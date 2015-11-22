@@ -468,7 +468,7 @@ What happens if you do `R1*fastq`?
 Do each of the following using a single `ls` command without
 navigating to a different directory.
 
-1.  List all of the files in `/bin` that start with the letter 'c
+1.  List all of the files in `/bin` that start with the letter 'c'
 2.  List all of the files in `/bin` that contain the letter 'a'
 3.  List all of the files in `/bin` that end with the letter 'o'
 
