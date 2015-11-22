@@ -8,9 +8,8 @@ root: .
 
 Author: Tracy Teal  
 Original contributors:
-Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)
-VLSCI contributions:
-Matthew Wakefield
+Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)  
+VLSCI contributions: Matthew Wakefield  
 
 ## Objectives
 - What is the shell?
@@ -38,8 +37,7 @@ going to need to use the shell.
 * The shell gives you *power*. The command line gives you the power to do your work more efficiently and
 more quickly.  When you need to do things tens to hundreds of times,
 knowing how to use the shell is transformative.
-* To use remote computers or cloud computing, you need to use the shell.
-
+* To use remote computers or high-performance computing (HPC) systems, you need to use the shell.
 
 ![Automation](img/gvng.jpg)
 
@@ -51,13 +49,13 @@ shell commands.
 
 ## Information on the shell
 
-shell cheat sheets:<br>
+Shell cheat sheets:<br>
 
 - [http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/](http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
 - [https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md](https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md)
 
-Explain shell - a web site where you can see what the different components of
-a shell command are doing.  
+Some web sites where you can see what the different components of
+a shell command are doing:
 
 - [http://explainshell.com](http://explainshell.com)
 - [http://www.commandlinefu.com](http://www.commandlinefu.com)
@@ -95,29 +93,31 @@ by manipulating some experimental data.
 Now we're going to download the data for the tutorial. For this you'll need
 internet access, because you're going to get it off the web.  
 
-We're going to be working with data from 
+We're going to be working with data from
 [https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.tar.gz]
 (https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.tar.gz)
 
-You can download this data, move it to your home directory and open it using
-your computers graphic user interface.  Opening the file should create a folder
+We haven't yet seen how to use the shell to manipulate files, but you can download this data,
+move it to your home directory and open it using
+your computer's graphical user interface.  Opening the file should create a folder
 called shell-genomics containing a folder called data.
 
-If it doesn't work just ask a helper - this often is the most difficult part of
+If you have trouble just ask a helper - this often is the most difficult part of
 the entire lesson!
 
-Now let's go in to that directory
+Now let's go into that directory:
 
     cd shell-genomics
 
-This stands for 'change directory'
+`cd` is a command which stands for 'change directory'
 
 In this directory, there should be some things we just downloaded.
 
 Let's check. Type:
+
     ls
 
-ls stands for 'list' and it lists the contents of a directory.
+`ls` stands for 'list' and it lists the contents of a directory.
 
 There's a few directories there, but not too many. Let's go look in the data directory.
 
@@ -131,7 +131,7 @@ know which is which, we can type:
 
 Anything with a "/" after it is a directory.  
 Things with a "*" after them are programs.  
-It there's nothing there it's a file.
+It there's nothing after it, it's just a file.
 
 You can also use the command
 
@@ -139,7 +139,7 @@ You can also use the command
 
 to see whether items in a
 directory are files or directories. `ls -l` gives a lot more
-information too, such as the size of the file
+information too, such as the size of the files.
 
 So, we can see that we have several files, directories and a program. Great!
 
@@ -200,10 +200,12 @@ with root (/) at the base that looks like this.
 
 ![Unix](img/Slide1.jpg)
 
-That (/) at the base is often also called the 'top' level.
+That (/) at the base is often also called the 'top' level, or the 'root' of the filesystem.
 
 When you are working at your computer or log in to a remote computer,
-you are on one of the branches of that tree, your home directory (/home/username)
+you start on one of the branches of that tree, your "home directory".
+On Linux this is `/home/username` (where username is replaced by your own username)
+and on a Mac it will usually be `Users/username`.
 
 Now let's go do that same navigation at the command line.
 
@@ -211,7 +213,7 @@ Type
 
     cd
 
-This puts you in your home directory. This folder here.
+`cd` without any arguments like this puts you in your home directory.
 
 Now using `cd` and `ls`, go in to the 'shell-genomics' directory and list its contents.
 
@@ -222,7 +224,7 @@ If you want to know what directory you're currently in, type
 
     pwd
 
-This stands for 'print working directory'. The directory you're currently working in.
+This stands for 'print working directory', and shows the directory you're currently working in.
 
 What if we want to move back up and out of the 'data' directory? Can we just
 type `cd shell-genomics`? Try it and see what happens.
@@ -233,8 +235,9 @@ Type
 
     cd ..
 
-Now do `ls` and `pwd`. See now that we went back up in to the 'shell-genomics'
-directory. `..` means go back up a level.
+Now do `ls` and `pwd`. You should see that we went back up into the 'shell-genomics'
+directory. `..` refers to the directory "above" this one in the tree, the parent directory,
+so `cd ..` means go back up a level.
 
 ***
 **Exercise**
@@ -285,17 +288,17 @@ Try finding the 'anotherfile.txt' file without changing directories.
 Navigate to the home directory. Typing out directory names can waste a
 lot of time. When you start typing out the name of a directory, then
 hit the tab key, the shell will try to fill in the rest of the
-directory name. For example, type `cd` to get back to your home directy, then enter:
+directory name. For example, type `cd` to get back to your home directory, then enter:
 
     cd sh<tab>
 
 The shell will fill in the rest of the directory name for
-`shell-genomics`. Now go to shell-genomics/data/MiSeq
+`shell-genomics`. Now go to the `shell-genomics/data/MiSeq` directory, and try:
 
     ls F3D<tab><tab>
 
 When you hit the first tab, nothing happens. The reason is that there
-are multiple directories in the home directory which start with
+are multiple directories in this directory which start with
 `F3D`. Thus, the shell does not know which one to fill in. When you hit
 tab again, the shell will list the possible choices.
 
@@ -360,7 +363,7 @@ navigate amongst them.
 ***
 **Exercise**
 
-Now, list the contents of the /bin directory. Do you see anything
+Now, list the contents of the `/bin` directory. Do you see anything
 familiar in there?
 
 ***
@@ -426,7 +429,7 @@ Navigate to the `~/shell-genomics/data/MiSeq` directory. This
 directory contains our FASTQ files and some other ones
 we'll need for analyses. If we type `ls`,
 we will see that there are a bunch of files with long file names.
-Some of the end with .fastq
+Some of them end with `.fastq`.
 
 The `*` character is a shortcut for "everything". Thus, if
 you enter `ls *`, you will see all of the contents of a given
@@ -543,7 +546,7 @@ This prints out the contents of the `F3D0_S188_L001_R1_001.fastq` file.
 * * * *
 
 Make sure we're in the right place for the next set of the lessons. We
-want to be in the `shell` directory. Check if you're there with `pwd`
+want to be in the `MiSeq` directory. Check if you're there with `pwd`
 and if not navigate there. One way to do that would be
 
     cd ~/shell-genomics/data/MiSeq
@@ -554,8 +557,8 @@ case. Enter the following command:
 
     less F3D0_S188_L001_R1_001.fastq
 
-`less` opens the file, and lets you navigate through it. The commands
-are identical to the `man` program.
+`less` opens the file, and lets you navigate through it. The keys for navigating
+back and forwards are identical to the `man` program.
 
 **Some commands in `less`**
 
