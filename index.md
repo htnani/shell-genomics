@@ -7,7 +7,7 @@ maintainers: ["Tracy Teal"]
 domain: Genomics
 topic: The Shell
 software: Shell
-dataurl: https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data\_files.tar.gz
+dataurl: https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data\_files.zip
 ---
 
 <!-- USING THIS LESSON TEMPLATE -->

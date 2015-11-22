@@ -94,8 +94,10 @@ Now we're going to download the data for the tutorial. For this you'll need
 internet access, because you're going to get it off the web.  
 
 We're going to be working with data from
-[https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.tar.gz]
-(https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.tar.gz)
+[https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.zip]
+(https://github.com/VLSCI/shell-genomics/releases/download/v0.1.0/data_files.zip)
+
+
 
 We haven't yet seen how to use the shell to manipulate files, but you can download this data,
 move it to your home directory and open it using
