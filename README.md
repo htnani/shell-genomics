@@ -573,16 +573,15 @@ back and forwards are identical to the `man` program.
 `less` also gives you a way of searching through files. Just hit the
 "/" key to begin a search. Enter the name of the word you would like
 to search for and hit enter. It will jump to the next location where
-that word is found. Try searching the `dictionary.txt` file for the
-word "cat". If you hit "/" then "enter", `less` will just repeat
+that word is found.
+
+For instance, let's search for the sequence `GTCGAC` in our file.
+You can see that we go right to that sequence and can see
+what it looks like.  If you hit "/" then "enter", `less` will just repeat
 the previous search. `less` searches from the current location and
 works its way forward. If you are at the end of the file and search
-for the word "cat", `less` will not find it. You need to go to the
+for the the sequence `GTCGAC`, `less` will not find it. You need to go to the
 beginning of the file and search.
-
-For instance, let's search for the sequence `1101:14341` in our file.
-You can see that we go right to that sequence and can see
-what it looks like.
 
 Remember, the `man` program actually uses `less` internally and
 therefore uses the same commands, so you can search documentation
@@ -613,7 +612,7 @@ search within files without even opening them, using `grep`. Grep is a command-l
 utility for searching plain-text data sets for lines matching a string or regular expression.
 Let's give it a try!
 
-Let's search for that sequence 1101:14341 in the `F3D0_S188_L001_R1_001.fastq` file.
+Let's search for the sequence `1101:14341` in the `F3D0_S188_L001_R1_001.fastq` file.
 
     grep 1101:14341 F3D0_S188_L001_R1_001.fastq
 
