@@ -938,13 +938,13 @@ So, for instance, let's list all the FASTQ files
 Or if we just wanted to look at the first 20 lines of each of the .fastq files, we could do
 
      for i in *.fastq;
-        head -n 40 $i;
+        do head -n 40 $i;
         done
 
 If we wanted to output these first 40 lines to a new file, we could do
 
      for i in *.fastq;
-         head -n 40 $i > new_$i;
+         do head -n 40 $i > new_$i;
          done
 
 ***
