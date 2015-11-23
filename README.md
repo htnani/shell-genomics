@@ -975,7 +975,7 @@ a symbolic link.  A symbolic link is like a pointer to the original file,
 while the alternative, a hard link, is more like the file existing in two
 places at the same time.
 
-    ln -s original_file.txt ../some_other_directory/new_name_for_file.txt
+    ln -s /home/myname/original_file.txt ../some_other_directory/new_name_for_file.txt
 
 ## Bonus materials: Brace expansion
 
